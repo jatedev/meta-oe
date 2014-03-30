@@ -2,7 +2,10 @@ SUMMARY = "A simple text editor for Xfce"
 SECTION = "x11/application"
 LICENSE = "GPLv2"
 LIC_FILES_CHKSUM = "file://COPYING;md5=94d55d512a9ba36caa9b7df079bae19f"
-DEPENDS = "gtk+ dbus-glib gtksourceview2"
+
+# dbus to fix mousepad/Makefile.am:72: error: HAVE_DBUS does not appear in AM_CONDITIONAL
+# intltool to provide intltool.m4 with AC_PROG_INTLTOOL
+DEPENDS = "gtk+ dbus-glib gtksourceview2 dbus intltool-native"
 
 inherit xfce-app
 

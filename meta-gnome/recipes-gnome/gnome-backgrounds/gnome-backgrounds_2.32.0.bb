@@ -5,6 +5,9 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=94d55d512a9ba36caa9b7df079bae19f"
 
 SECTION = "x11/gnome"
 
+# glib-2.0 for glib-gettext.m4 which provides AM_GLIB_GNU_GETTEXT
+DEPENDS = "glib-2.0"
+
 inherit gnomebase
 
 SRC_URI[archive.md5sum] = "3df26626483b02e51adefc6ab5945a8d"
